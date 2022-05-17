@@ -22,7 +22,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ListItem("Real Madrid", "Football Club")
+            Column() {
+                ListItem("Real Madrid", "Football Club")
+                ListItem("Real Madrid", "Football Club")
+                ListItem("Real Madrid", "Football Club")
+                ListItem("Real Madrid", "Football Club")
+                ListItem("Real Madrid", "Football Club")
+                ListItem("Real Madrid", "Football Club")
+            }
         }
     }
 }
@@ -43,7 +50,7 @@ private fun ListItem(name: String, prof: String) {
                         .size(64.dp)
                         .clip(CircleShape)
                 )
-                Column() {
+                Column(modifier = Modifier.padding(start = 16.dp)) {
                     Text(text = name)
                     Text(text = prof)
                 }

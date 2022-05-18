@@ -32,6 +32,7 @@ class MainActivity : ComponentActivity() {
                 itemsIndexed(listOf("Item 1", "Real", "Mbappe", "FIFA 22")) { index, item ->
                     Text(text = item, fontSize = 30.sp,
                         modifier = Modifier.padding(vertical = 10.dp))
+
                 }
             }
         }

@@ -27,17 +27,19 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LazyRow(modifier = Modifier.fillMaxWidth()
+            LazyColumn(modifier = Modifier.fillMaxWidth()
                 .background(Color.LightGray)) {
                 itemsIndexed(listOf(
-                    ItemRowModel(R.drawable.logo_bw, "Karim"),
-                    ItemRowModel(R.drawable.logo_bw, "Luka"),
-                    ItemRowModel(R.drawable.logo_bw, "Toni"),
-                    ItemRowModel(R.drawable.logo_bw, "Dani"),
-                    ItemRowModel(R.drawable.logo_bw, "Thibaut"),
-                    ItemRowModel(R.drawable.logo_bw, "Isco"),
-                    ItemRowModel(R.drawable.logo_bw, "Vini"),
-                    ItemRowModel(R.drawable.logo_bw, "Marco"),
+                    ItemRowModel(R.drawable.logo_bw, "Karim", "Best player of 21-22 season, Ballon D'Or, " +
+                            "best goalscorer, sniper, french international, five start player, so many trophies and still a lot to come " +
+                            "KARIIIIIIIMMM BENZEEEMAAAAAA"),
+                    ItemRowModel(R.drawable.logo_bw, "Luka", "test"),
+                    ItemRowModel(R.drawable.logo_bw, "Toni", "test"),
+                    ItemRowModel(R.drawable.logo_bw, "Dani", "test"),
+                    ItemRowModel(R.drawable.logo_bw, "Thibaut", "test"),
+                    ItemRowModel(R.drawable.logo_bw, "Isco", "test"),
+                    ItemRowModel(R.drawable.logo_bw, "Vini", "test"),
+                    ItemRowModel(R.drawable.logo_bw, "Marco", "test"),
                     )
                 ) { _, item ->
                     MyRow(item = item)

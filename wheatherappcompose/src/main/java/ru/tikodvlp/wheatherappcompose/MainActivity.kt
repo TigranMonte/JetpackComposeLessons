@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import org.json.JSONObject
 import ru.tikodvlp.wheatherappcompose.ui.theme.JetpackComposeLessonsTheme
 
 
@@ -54,7 +55,7 @@ fun Greeting(name: String, context: Context) {
         Box(modifier = Modifier.fillMaxHeight(0.5f)
             .fillMaxWidth(),
         contentAlignment = Alignment.Center) {
-            Text(text = "Temp in $name = ${state.value}")
+            Text(text = "Temp in $name = ${state.value} C")
         }
         Box(modifier = Modifier.fillMaxHeight()
             .fillMaxWidth(),
@@ -79,7 +80,8 @@ private fun getResult(city: String, state: MutableState<String>, context: Contex
         Request.Method.GET, url,
         {
             response ->
-            state.value = response
+            val obj = JSONObject(response )
+            state.value = obj.getJSONObject("current").getString("temp_c" )
         },
         {
             error ->

@@ -24,6 +24,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
+import ru.tikodvlp.wheatherappcompose.screens.MainScreen
 import ru.tikodvlp.wheatherappcompose.ui.theme.JetpackComposeLessonsTheme
 
 
@@ -34,7 +35,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeLessonsTheme {
-
+                MainScreen()
             }
         }
     }

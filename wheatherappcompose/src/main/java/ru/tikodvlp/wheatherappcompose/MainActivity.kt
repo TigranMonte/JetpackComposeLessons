@@ -28,7 +28,7 @@ import ru.tikodvlp.wheatherappcompose.screens.MainScreen
 import ru.tikodvlp.wheatherappcompose.ui.theme.JetpackComposeLessonsTheme
 
 
-const val API_KEY = "2affe497dfcb4d6aa58142449222305"
+//const val API_KEY = "2affe497dfcb4d6aa58142449222305"
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

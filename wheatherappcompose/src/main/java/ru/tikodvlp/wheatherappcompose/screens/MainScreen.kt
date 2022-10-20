@@ -2,6 +2,8 @@ package ru.tikodvlp.wheatherappcompose.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
@@ -55,12 +57,11 @@ fun MainCard() {
                     )
                     AsyncImage(
                         model = "https://cdn.weatherapi.com/weather/64x64/day/116.png",
-                        contentDescription = "im2",
+                        contentDescription = "im5",
                         modifier = Modifier
                             .size(35.dp)
                             .padding(
-                                top = 3.dp,
-                                end = 8.dp
+                                top = 8.dp
                             )
                             .size(35.dp)
                     )
@@ -159,6 +160,13 @@ fun TabLayout(){
             modifier = Modifier.weight(1.0f)
         ) {
                 index->
+            LazyColumn(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                items(15){
+                    ListItem()
+                }
+            }
         }
      }
 }

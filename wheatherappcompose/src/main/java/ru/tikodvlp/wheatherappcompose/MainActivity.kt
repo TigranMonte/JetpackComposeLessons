@@ -14,7 +14,6 @@ import ru.tikodvlp.wheatherappcompose.screens.MainCard
 import ru.tikodvlp.wheatherappcompose.screens.TabLayout
 import ru.tikodvlp.wheatherappcompose.ui.theme.JetpackComposeLessonsTheme
 
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -17,6 +17,7 @@ import ru.tikodvlp.wheatherappcompose.ui.theme.JetpackComposeLessonsTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             JetpackComposeLessonsTheme {
                 Image(

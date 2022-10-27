@@ -59,7 +59,7 @@ fun MainCard() {
                     )
                     AsyncImage(
                         model = "https://cdn.weatherapi.com/weather/64x64/day/116.png",
-                        contentDescription = "im5",
+                        contentDescription = "image5",
                         modifier = Modifier
                             .size(35.dp)
                             .padding(
@@ -93,7 +93,7 @@ fun MainCard() {
                     ) {
                         Icon(
                             painter = painterResource(id = R.drawable.ic_search),
-                            contentDescription = "im3",
+                            contentDescription = "image3",
                             tint = Color.White
                         )
                     }
@@ -109,7 +109,7 @@ fun MainCard() {
                     ) {
                         Icon(
                             painter = painterResource(id = R.drawable.ic_sync),
-                            contentDescription = "im4",
+                            contentDescription = "image4",
                             tint = Color.White
                         )
                     }

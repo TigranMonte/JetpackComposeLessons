@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
             JetpackComposeLessonsTheme {
                 Image(
                     painter = painterResource(id = R.drawable.wheather_bg),
-                    contentDescription = "im1",
+                    contentDescription = "image1",
                     modifier = Modifier
                         .fillMaxSize()
                         .alpha(0.5f),

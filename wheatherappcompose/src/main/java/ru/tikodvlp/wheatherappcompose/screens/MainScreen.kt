@@ -118,7 +118,6 @@ fun MainCard() {
         }
     }
 }
-
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun TabLayout(){

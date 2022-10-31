@@ -19,7 +19,6 @@ import ru.tikodvlp.wheatherappcompose.screens.MainCard
 import ru.tikodvlp.wheatherappcompose.screens.TabLayout
 import ru.tikodvlp.wheatherappcompose.ui.theme.JetpackComposeLessonsTheme
 
-
 const val API_KEY = "7f8e782afb2743a79c3143406221810"
 
 class MainActivity : ComponentActivity() {
@@ -44,7 +43,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 private fun getData(city: String, context: Context) {
     val url = "https://api.weatherapi.com/v1/forecast.json?key=$API_KEY" +
             "&q=$city" +

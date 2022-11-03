@@ -115,7 +115,6 @@ fun MainCard(currentDay: MutableState<WeatherModel>) {
         }
     }
 }
-
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun TabLayout(daysList: MutableState<List<WeatherModel>>){

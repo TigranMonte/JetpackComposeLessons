@@ -114,6 +114,7 @@ private fun getWeatherByDays(response: String): List<WeatherModel> {
             )
         )
     }
+
     //чтобы в списке на позиции 0 стоял weatherModel с перезаписанными данными времени и currentTemp
     list[0] = list[0].copy(
         time = mainObject.getJSONObject("current").getString("last_updated"),

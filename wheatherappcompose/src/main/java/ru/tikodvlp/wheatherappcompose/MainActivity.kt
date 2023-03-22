@@ -20,6 +20,7 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
 import ru.tikodvlp.wheatherappcompose.data.WeatherModel
+import ru.tikodvlp.wheatherappcompose.screens.DialogSearch
 import ru.tikodvlp.wheatherappcompose.screens.MainCard
 import ru.tikodvlp.wheatherappcompose.screens.TabLayout
 import ru.tikodvlp.wheatherappcompose.ui.theme.JetpackComposeLessonsTheme
@@ -34,6 +35,9 @@ class MainActivity : ComponentActivity() {
                 val daysList = remember {
                     mutableStateOf(listOf<WeatherModel>())
                 }
+                val dialogState = remember {
+                    mutableStateOf(false)
+                }
                 val currentDay = remember {
                     mutableStateOf(WeatherModel(
                         "",
@@ -47,6 +51,11 @@ class MainActivity : ComponentActivity() {
                     )
                     )
                 }
+                if (dialogState.value) {
+                    DialogSearch(dialogState, onSubmit = {
+                        getData(it, this, daysList, currentDay)
+                    })
+                }
                 getData("Madrid", this, daysList, currentDay)
                 Image(
                     painter = painterResource(id = R.drawable.wheather_bg),
@@ -57,7 +66,11 @@ class MainActivity : ComponentActivity() {
                     contentScale = ContentScale.FillBounds
                 )
                 Column {
-                    MainCard(currentDay)
+                    MainCard(currentDay, onClickSync = {
+                        getData("Madrid", this@MainActivity, daysList, currentDay)
+                    }, onClickSearch = {
+                        dialogState.value = true
+                    })
                     TabLayout(daysList, currentDay)
                 }
             }

@@ -109,7 +109,7 @@ fun DialogSearch(dialogState: MutableState<Boolean>, onSubmit: (String) -> Unit)
     },
     title = {
         Column(modifier = Modifier.fillMaxWidth()) {
-            Text(text = "Введите название города:")
+            Text(text = "Enter city name:")
             TextField(value = dialogText.value, onValueChange = {
                 dialogText.value = it
             })

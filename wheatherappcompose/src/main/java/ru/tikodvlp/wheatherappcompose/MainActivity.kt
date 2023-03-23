@@ -77,7 +77,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 private fun getData(city: String, context: Context,
                     daysList: MutableState<List<WeatherModel>>, currentDay: MutableState<WeatherModel>) {
     val url = "https://api.weatherapi.com/v1/forecast.json?key=$API_KEY" +
@@ -102,7 +101,6 @@ private fun getData(city: String, context: Context,
     )
     queue.add(sRequest)
 }
-
 private fun getWeatherByDays(response: String): List<WeatherModel> {
     if (response.isEmpty()) return listOf()
     val list = ArrayList<WeatherModel>()
@@ -127,7 +125,6 @@ private fun getWeatherByDays(response: String): List<WeatherModel> {
             )
         )
     }
-
     //чтобы в списке на позиции 0 стоял weatherModel с перезаписанными данными времени и currentTemp
     list[0] = list[0].copy(
         time = mainObject.getJSONObject("current").getString("last_updated"),
